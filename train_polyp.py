@@ -12,7 +12,7 @@ from torch.autograd import Variable
 from torch.optim.lr_scheduler import CosineAnnealingLR
 
 # Project-specific imports
-from lib.mkunet_network import MK_UNet
+from mkunet_network import MK_UNet
 from utils.dataloader_polyp import get_loader
 from utils.utils import clip_gradient, adjust_lr, AvgMeter, cal_params_flops
 
