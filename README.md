@@ -45,7 +45,9 @@ Download the splited ColonDB dataset from [Google Drive](https://drive.google.co
 
 ### Training:
 ```
-cd into MK-UNet 
+cd into MK-UNet
+CUDA_VISIBLE_DEVICES=0 python -W ignore train_polyp.py --network MK_UNet
+
 ```
 
 ### Testing:
