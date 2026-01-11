@@ -6,14 +6,7 @@ Official Pytorch implementation of the paper [MK-UNet: Multi-kernel Lightweight 
 
 [ARXIV](https://arxiv.org/abs/2509.18493) | [PAPER](https://openaccess.thecvf.com/content/ICCV2025W/CVAMD/papers/Rahman_MK-UNet_Multi-kernel_Lightweight_CNN_for_Medical_Image_Segmentation_ICCVW_2025_paper.pdf) | [Code](https://github.com/SLDGroup/MK-UNet)
 
-#### 🔍 **Check out our NeurIPS 2025 paper! [LoMix](https://github.com/SLDGroup/LoMix)**
-#### 🔍 **Check out our MICCAI 2025 paper! [EfficientMedNeXt](https://github.com/SLDGroup/EfficientMedNeXt)** 
-#### 🔍 **Check out our CVPR 2025 paper! [EffiDec3D](https://github.com/SLDGroup/EffiDec3D)**
-#### 🔍 **Check out our CVPR 2024 paper! [EMCAD](https://github.com/SLDGroup/EMCAD)** 
-#### 🔍 **Check out our CVPRW 2024 paper! [PP-SAM](https://github.com/SLDGroup/PP-SAM)** 
-#### 🔍 **Check out our WACV 2024 paper! [G-CASCADE](https://github.com/SLDGroup/G-CASCADE)**
-#### 🔍 **Check out our MIDL 2023 paper! [MERIT](https://github.com/SLDGroup/MERIT)**
-#### 🔍 **Check out our WACV 2023 paper! [CASCADE](https://github.com/SLDGroup/CASCADE)**
+#### 🔍 **Check out our papers: [LoMix](https://github.com/SLDGroup/LoMix) [NeurIPS 2025], [EfficientMedNeXt](https://github.com/SLDGroup/EfficientMedNeXt) [MICCAI 2025], [EffiDec3D](https://github.com/SLDGroup/EffiDec3D) [CVPR 2025], [EMCAD](https://github.com/SLDGroup/EMCAD) [CVPR 2024], [PP-SAM](https://github.com/SLDGroup/PP-SAM) [CVPRW 2024], [G-CASCADE](https://github.com/SLDGroup/G-CASCADE) [WACV 2024], [MERIT](https://github.com/SLDGroup/MERIT) [MIDL 2023], [CASCADE](https://github.com/SLDGroup/CASCADE) [WACV 2023]**
 
 
 ## Architecture
