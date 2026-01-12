@@ -53,6 +53,8 @@ CUDA_VISIBLE_DEVICES=0 python -W ignore train_polyp.py --network MK_UNet
 ### Testing:
 ```
 cd into MK-UNet 
+CUDA_VISIBLE_DEVICES=0 python -W ignore test_polyp.py --network MK_UNet --run_id <your run_id>
+
 ```
 
 ## Acknowledgement
