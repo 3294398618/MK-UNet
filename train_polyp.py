@@ -170,7 +170,7 @@ if __name__ == '__main__':
     parser.add_argument('--network', type=str, default='MK_UNet', 
                         choices=['MK_UNet_T', 'MK_UNet_S', 'MK_UNet', 'MK_UNet_M', 'MK_UNet_L'])    
     parser.add_argument('--epoch', type=int, default=200)
-    parser.add_argument('--lr', type=float, default=0.0001)
+    parser.add_argument('--lr', type=float, default=0.0005) # base learning rate is 0.0005 for CosineAnnealingLR and 0.0001 for no scheduler
     parser.add_argument('--batchsize', type=int, default=8)
     parser.add_argument('--test_batchsize', type=int, default=8)
     parser.add_argument('--img_size', type=int, default=352)
@@ -234,7 +234,7 @@ if __name__ == '__main__':
         print(f"Network: {chosen_net} | Channels: {channels}")
         cal_params_flops(model, opt.img_size, logging)
         optimizer = torch.optim.AdamW(model.parameters(), opt.lr, weight_decay=1e-4)
-        #scheduler = CosineAnnealingLR(optimizer, T_max=opt.epoch, eta_min=1e-6)
+        scheduler = CosineAnnealingLR(optimizer, T_max=opt.epoch, eta_min=1e-6)
 
         train_loader = get_loader(
             image_root=f'{opt.train_path}/images/', gt_root=f'{opt.train_path}/masks/',
@@ -243,9 +243,9 @@ if __name__ == '__main__':
         )
 
         for epoch in range(1, opt.epoch + 1):
-            adjust_lr(optimizer, opt.lr, epoch, opt.decay_rate, opt.decay_epoch)
+            #adjust_lr(optimizer, opt.lr, epoch, opt.decay_rate, opt.decay_epoch)
             train(train_loader, model, optimizer, epoch, opt, run_id)
-            #scheduler.step()
+            scheduler.step()
         # FINAL SUMMARY
         
         summary = (f"\n{'='*40}\nFINAL RESULTS: {run_id}\n"
