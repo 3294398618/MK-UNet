@@ -12,7 +12,7 @@ from torch.autograd import Variable
 from torch.optim.lr_scheduler import CosineAnnealingLR
 
 # Project-specific imports
-from lib.mkunet_network import MK_UNet
+from mkunet_network import MK_UNet
 from utils.dataloader_polyp import get_loader
 from utils.utils import clip_gradient, adjust_lr, AvgMeter, cal_params_flops
 
@@ -95,9 +95,7 @@ def test(model, path, dataset, opt):
                 input_binary = (pred_resized >= 0.5).float()
                 target_binary = (gt_resized >= 0.2).float() 
 
-                # Applying original thresholding (0.5 for pred, 0.2 for target) and truncation
-                #DSC += float('{:.4f}'.format(dice_coefficient(input_binary, target_binary).item()))
-                #IOU += float('{:.4f}'.format(iou(input_binary, target_binary).item()))
+                # Applying original thresholding (0.5 for pred, 0.2 for target)
                 total_images += 1
 
                 DSC += dice_coefficient(input_binary, target_binary).item()
@@ -122,7 +120,7 @@ def train(train_loader, model, optimizer, epoch, opt, model_name):
             if rate != 1:
                 trainsize = int(round(opt.img_size * rate / 32) * 32)
                 images = F.interpolate(images, size=(trainsize, trainsize), mode='bilinear', align_corners=True)
-                gts = F.interpolate(gts, size=(trainsize, trainsize), mode='bilinear', align_corners=True)
+                gts = F.interpolate(gts, size=(trainsize, trainsize), mode='nearest')
             
             out = model(images)
             loss = structure_loss(out[0] if isinstance(out, list) else out, gts)
