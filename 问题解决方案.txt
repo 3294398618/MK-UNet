@@ -1,0 +1,9 @@
+conda activate D:\CondaEnvs\mkunetenv
+powershell梯子代理
+$env:HTTPS_PROXY = "http://127.0.0.1:7897"
+$env:HTTP_PROXY = "http://127.0.0.1:7897"
+
+这玩意儿老出错，要直接下载编译好的包
+pip install simpleitk --only-binary=simpleitk
+可以指定pip防止下载错地方
+D:\CondaEnvs\mkunetenv\Scripts\pip.exe install -r requirements.txt
