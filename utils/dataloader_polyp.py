@@ -93,8 +93,8 @@ class PolypDataset(data.Dataset):
 
     def __len__(self):
         return self.size
-
-def get_loader(image_root, gt_root, batchsize, trainsize, shuffle=False, num_workers=4, pin_memory=True, augmentation=False, split='train', color_image=True):
+# num_workers=4 修改为0，限制win环境下的虚拟内存大小
+def get_loader(image_root, gt_root, batchsize, trainsize, shuffle=False, num_workers=0, pin_memory=True, augmentation=False, split='train', color_image=True):
     dataset = PolypDataset(image_root, gt_root, trainsize, augmentation, split, color_image)
     return data.DataLoader(dataset=dataset, batch_size=batchsize, shuffle=shuffle, num_workers=num_workers, pin_memory=pin_memory)
     

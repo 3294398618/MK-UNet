@@ -1,0 +1,21 @@
+[2026-03-31 17:37:16,066] flops: 0.051128814, params: 0.027384, Total params: : 0.0274
+[2026-03-31 17:38:01,856] Epoch: 1, Dataset: test, Dice: 0.2550, IoU: 0.1601
+[2026-03-31 17:38:02,403] Epoch: 1, Dataset: val, Dice: 0.3562, IoU: 0.2484
+[2026-03-31 17:38:02,403] ### Best Model Saved (Dice improved from 0.0000 to 0.3562) ###
+[2026-03-31 17:38:48,553] Epoch: 2, Dataset: test, Dice: 0.2767, IoU: 0.1786
+[2026-03-31 17:38:49,106] Epoch: 2, Dataset: val, Dice: 0.3485, IoU: 0.2310
+[2026-03-31 17:39:34,823] Epoch: 3, Dataset: test, Dice: 0.3252, IoU: 0.2112
+[2026-03-31 17:39:35,365] Epoch: 3, Dataset: val, Dice: 0.3775, IoU: 0.2612
+[2026-03-31 17:39:35,365] ### Best Model Saved (Dice improved from 0.3562 to 0.3775) ###
+[2026-03-31 17:40:20,898] Epoch: 4, Dataset: test, Dice: 0.4047, IoU: 0.2886
+[2026-03-31 17:40:21,445] Epoch: 4, Dataset: val, Dice: 0.4785, IoU: 0.3529
+[2026-03-31 17:40:21,445] ### Best Model Saved (Dice improved from 0.3775 to 0.4785) ###
+[2026-03-31 17:41:06,823] Epoch: 5, Dataset: test, Dice: 0.3805, IoU: 0.2567
+[2026-03-31 17:41:07,376] Epoch: 5, Dataset: val, Dice: 0.4220, IoU: 0.2978
+[2026-03-31 17:41:07,377] 
+========================================
+FINAL RESULTS: ClinicDB_MK_UNet_T_bs2_lr0.0005_e5_augTrue_run2_t173715
+Best Val Dice: 0.4785
+Test Dice at Best Val: 0.4047
+Total Train Time: 225.29s
+========================================
